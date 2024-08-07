@@ -59,7 +59,7 @@
 }
 
 .parallax__stars {
-  --parallax-speed: 500;
+  --parallax-speed: 100;
   z-index: 2;
 }
 
