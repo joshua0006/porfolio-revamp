@@ -23,19 +23,19 @@ export const navLinks = [
 
 const experiences = [
   {
-    title: "Front-end Developer",
-    company_name: "Self Employed",
+    title: "Associate Front-end Developer",
+    company_name: "Open Source Projects",
     date: "2023 - Present",
     details: [
       "I specialize in transforming ideas into <span style='color: white;'>Seamless</span> , <span style='color: white;'>User-Friendly Digital Experiences</span>, all while maintaining a high standard of privacy and security. Take a look at my work to see how I blend creativity with technical expertise to build bespoke web solutions tailored to your needs.",
     ],
   },
   {
-    title: "Data Analytics",
-    company_name: "Local Government",
+    title: "Freelancer Front-end Developer",
+    company_name: "Self Employed",
     date: "2023",
     details: [
-      "I gained expertise in <span style='color: white;'>Data Visualization</span> by creating interactive charts.",
+      "I gained expertise in <span style='color: white;'>HTML, CSS</span> and <span style='color: white;'>Javascript</span>  by creating different kind of small projects.",
       "I honed skills in working with APIs to dynamically display data, collaborated with analysts to meet their needs, and developed<span style='color: white;'> Problem-Solving Abilities</span> to address data-related challenges and optimize performance."
     ],
   },
