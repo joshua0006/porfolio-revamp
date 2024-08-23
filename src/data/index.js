@@ -1,5 +1,5 @@
 import {
-  dylanShop,
+  dylanShop, tailwind
 } from "../assets";
 
 export const navLinks = [
@@ -43,10 +43,18 @@ const experiences = [
 
 const portfolio = [
   {
-    name: "Ecommerce Site",
+    name: "Dylan Goods Shop",
     description:
       "Built a responsive eCommerce site with HTML, CSS, and JavaScript. Created dynamic product listings and a smooth checkout process using React. Focused on enhancing user experience and performance across all devices.",
     image: dylanShop,
+    href: "https://dylan-shop.netlify.app/"
+  },
+  {
+    name: "Ecommerce Site using Tailwind CSS",
+    description:
+      `An e-commerce website developed using Tailwind CSS for styling. Tailwind CSS is a utility-first CSS framework that allows for quick and responsive design implementation. Note: The project is currently a work in progress and not yet complete.`,
+    image: tailwind,
+    href: "https://ecommerce-ctailwind.netlify.app/"
   }
 ];
 
