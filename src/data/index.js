@@ -51,7 +51,7 @@ const portfolio = [
     name: "Particle Catcher Game",
     description: `A particle catcher game built with HTML, CSS, and JavaScript. The game features a dynamic canvas that displays particles and a catcher that the player can move to catch the particles. The game also features a score counter and a game over screen.`,
     image: particleCatcher,
-    href: "https://particle-catcher-game.netlify.app/",
+    href: "https://particle-catcher.netlify.app",
   },
   {
     name: "E shopper",
