@@ -5,7 +5,7 @@ import algorithms from "./algorithms.png";
 import devnotes from "./devnotes.png";
 import dylanShop from "./dylanShop.png";
 import tailwind from "./tailwind.png";
-import eShopper from "./eShopper.png";
+import eShopper from "./eshopper.png";
 
 export {
   algorithms,
