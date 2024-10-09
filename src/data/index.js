@@ -1,4 +1,4 @@
-import { dylanShop, tailwind, eShopper } from "../assets";
+import { dylanShop, eShopper, particleCatcher } from "../assets";
 
 export const navLinks = [
   {
@@ -48,10 +48,10 @@ const portfolio = [
     href: "https://dylan-shop.netlify.app/",
   },
   {
-    name: "Ecommerce Site using Tailwind CSS",
-    description: `An e-commerce website developed using Tailwind CSS for styling. Tailwind CSS is a utility-first CSS framework that allows for quick and responsive design implementation. Note: The project is currently a work in progress and not yet complete.`,
-    image: tailwind,
-    href: "https://ecommerce-ctailwind.netlify.app/",
+    name: "Particle Catcher Game",
+    description: `A particle catcher game built with HTML, CSS, and JavaScript. The game features a dynamic canvas that displays particles and a catcher that the player can move to catch the particles. The game also features a score counter and a game over screen.`,
+    image: particleCatcher,
+    href: "https://particle-catcher-game.netlify.app/",
   },
   {
     name: "E shopper",

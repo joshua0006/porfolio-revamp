@@ -6,6 +6,7 @@ import devnotes from "./devnotes.png";
 import dylanShop from "./dylanShop.png";
 import tailwind from "./tailwind.png";
 import eShopper from "./eshopper.png";
+import particleCatcher from "./particle-catcher.png";
 
 export {
   algorithms,
@@ -16,4 +17,5 @@ export {
   dylanShop,
   tailwind,
   eShopper,
+  particleCatcher,
 };
