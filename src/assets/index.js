@@ -5,8 +5,9 @@ import algorithms from "./algorithms.png";
 import devnotes from "./devnotes.png";
 import dylanShop from "./dylanShop.png";
 import tailwind from "./tailwind.png";
-import eShopper from "./eshopper.png";
-import particleCatcher from "./particle-catcher.png";
+
+import shopHub from "./shopHub.png";
+import elementClash from "./elementClash.png";
 
 export {
   algorithms,
@@ -16,6 +17,6 @@ export {
   menu,
   dylanShop,
   tailwind,
-  eShopper,
-  particleCatcher,
+  shopHub,
+  elementClash,
 };
