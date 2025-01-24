@@ -5,8 +5,7 @@ import algorithms from "./algorithms.png";
 import devnotes from "./devnotes.png";
 import dylanShop from "./dylanShop.png";
 import tailwind from "./tailwind.png";
-
-import shopHub from "./shopHub.png";
+import shopHub from "./shophub.png";
 import elementClash from "./elementClash.png";
 
 export {
