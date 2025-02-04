@@ -137,16 +137,9 @@ const Navbar = () => {
                 }
               }}
             >
-              <AnimatePresence mode="wait">
-                {active === nav.id && (
-                  <motion.div
-                    initial={{ opacity: 0, width: 0 }}
-                    animate={{ opacity: 1, width: "8px" }}
-                    exit={{ opacity: 0, width: 0 }}
-                    className="fixed right-10 w-2 h-6 lg:h-8 bg-quaternary"
-                  />
-                )}
-              </AnimatePresence>
+              {active === nav.id && (
+                <div className="fixed right-10 w-2 h-6 lg:h-8 bg-quaternary" />
+              )}
               <a href={`#${nav.id}`}>{nav.title}</a>
             </motion.li>
           ))}
