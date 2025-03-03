@@ -5,8 +5,10 @@ import algorithms from "./algorithms.png";
 import devnotes from "./devnotes.png";
 import dylanShop from "./dylanShop.png";
 import tailwind from "./tailwind.png";
-import shopHub from "./shophub.png";
+import jic from "./JiC.png";
 import elementClash from "./elementClash.png";
+import cardMatch from "./card-match.png";
+
 
 export {
   algorithms,
@@ -14,8 +16,8 @@ export {
   devnotes,
   logo,
   menu,
-  dylanShop,
+  cardMatch,
   tailwind,
-  shopHub,
+  jic,
   elementClash,
 };

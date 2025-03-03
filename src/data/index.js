@@ -1,4 +1,4 @@
-import { dylanShop, elementClash, shopHub } from "../assets";
+import { cardMatch, elementClash, jic } from "../assets";
 
 export const navLinks = [
   {
@@ -21,18 +21,6 @@ export const navLinks = [
 
 const experiences = [
   {
-    title: "Web Developer",
-    company_name: "Exercise For Injuries",
-    date: "2024 - Present",
-    details: [
-      "Developed responsive web applications using <span style='color: white;'>React, Next.js, and TypeScript</span> with 95+ Lighthouse performance scores",
-      "Implemented <span style='color: white;'>Redux Toolkit</span> for state management and <span style='color: white;'>React Query</span> for server-state synchronization",
-      "Integrated <span style='color: white;'>RESTful APIs</span> and optimized database queries reducing load times by 40%",
-      "Established <span style='color: white;'>CI/CD pipelines</span> using GitHub Actions and Docker containers",
-      "Conducted code reviews and mentored junior developers in <span style='color: white;'>clean architecture</span> principles",
-    ],
-  },
-  {
     title: "Web Designer",
     company_name: "Jezweb",
     date: "2023 - Present",
@@ -44,6 +32,18 @@ const experiences = [
       "Collaborated with developers to implement <span style='color: white;'>motion design</span> using Framer Motion",
     ],
   },
+  {
+    title: "Web Developer",
+    company_name: "Exercise For Injuries",
+    date: "2024 - 2025",
+    details: [
+      "Developed responsive web applications using <span style='color: white;'>React, Next.js, and TypeScript</span> with 95+ Lighthouse performance scores",
+      "Implemented <span style='color: white;'>Redux Toolkit</span> for state management and <span style='color: white;'>React Query</span> for server-state synchronization",
+      "Integrated <span style='color: white;'>RESTful APIs</span> and optimized database queries reducing load times by 40%",
+      "Established <span style='color: white;'>CI/CD pipelines</span> using GitHub Actions and Docker containers",
+      "Conducted code reviews and mentored junior developers in <span style='color: white;'>clean architecture</span> principles",
+    ],
+  },    
   {
     title: "Freelancer Front-end Developer",
     company_name: "Self Employed",
@@ -60,21 +60,20 @@ const experiences = [
 
 const portfolio = [
   {
-    name: "Shop Hub",
-    description: `Built with React and React Router for seamless navigation, integrated with Redux Toolkit for state management. Features Firebase backend for product data and user authentication, Stripe API for payment processing, and styled with Tailwind CSS. Deployed on Netlify with continuous integration.`,
-    image: shopHub,
-    href: "https://shophube.netlify.app/",
+    name: "Journeys in Communication",
+    description: `Interactive learning platform built with React and React Router, featuring educational content about communication strategies. Implements Firebase for user authentication and content storage, with real-time updates through Firestore. Includes interactive quizzes using Redux Toolkit for state management and styled with Tailwind CSS for clean educational layouts.`,
+    image: jic,
+    href: "https://communicationjourney.netlify.app/",
   },
   {
-    name: "Dylan Goods Shop",
-    description:
-      "React-powered eCommerce platform using Context API for state management. Built with Vite for tooling, implements responsive design through CSS Grid/Flexbox, and features dynamic product filtering. Deployed via Netlify with automated CI/CD pipelines.",
-    image: dylanShop,
-    href: "https://dylan-shop.netlify.app/",
+    name: "Card Matcher",
+    description: "Memory matching game built with React and Vite, utilizing Context API for tracking card states and game progress. Features dynamic card animations with CSS transforms, score tracking with Local Storage API, and responsive grid layouts using CSS Grid. Includes multiple difficulty levels and automated CI/CD deployment through Netlify.",
+    image: cardMatch,
+    href: "https://card-matcher-game.netlify.app/",
   },
   {
     name: "Element Clash",
-    description: `React game built with Vite and optimized with Tailwind CSS. Features real-time interactions using WebSocket, complex game logic through custom hooks, and animations powered by Framer Motion. Includes PWA capabilities and deployed on Netlify Edge Network.`,
+    description: `Elemental strategy game built with React and Vite, featuring real-time battles between different elements. Implements game logic with custom hooks for elemental strengths/weaknesses systems, animated battles using Framer Motion, and persistent player stats via Firebase. Optimized for performance with code splitting and deployed on Netlify Edge Network.`,
     image: elementClash,
     href: "https://element-clasher.netlify.app/",
   },
