@@ -8,7 +8,9 @@ import tailwind from "./tailwind.png";
 import jic from "./JiC.png";
 import elementClash from "./elementClash.png";
 import cardMatch from "./card-match.png";
-
+import redHorizon from "./red-horizon.png";
+import modCycle from "./modcycle.png";
+import architectHub from "./architect-hub.png";
 
 export {
   algorithms,
@@ -20,4 +22,7 @@ export {
   tailwind,
   jic,
   elementClash,
+  redHorizon,
+  modCycle,
+  architectHub,
 };

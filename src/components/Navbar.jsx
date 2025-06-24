@@ -125,7 +125,6 @@ const Navbar = () => {
               variants={listItemVariants}
               initial="hidden"
               animate="visible"
-              whileHover={{ scale: 1.1 }}
               className={`relative flex items-center ${
                 active === nav.id ? "text-white" : "text-slate-500"
               } hover:text-white text-[18px] lg:text-[24px] font-bold pointer-events-auto cursor-pointer`}

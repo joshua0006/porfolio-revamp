@@ -4,10 +4,20 @@ import Hero from "./Hero";
 import CanvasLoader from "./Loader";
 import Navbar from "./Navbar";
 import Portfolio from "./Portfolio";
+import AllProjects from "./AllProjects";
 import Position from "./Position";
+import Skills from "./Skills";
 import SpacemanCanvas from "./Spaceman";
 
 export {
-    CanvasLoader, Contact, Experience, Hero, Navbar, Portfolio, Position, SpacemanCanvas
+  AllProjects,
+  CanvasLoader,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Portfolio,
+  Position,
+  Skills,
+  SpacemanCanvas,
 };
-

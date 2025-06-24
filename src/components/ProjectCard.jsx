@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { fadeIn } from "../utils/motion";
-import { Link } from "react-router-dom";
 
 const ProjectCard = ({ index, name, description, image, href }) => {
   const controls = useAnimation();
@@ -30,14 +29,13 @@ const ProjectCard = ({ index, name, description, image, href }) => {
       } gap-5`}
     >
       <div className="relative w-full md:w-3/5">
-        <Link to={href}>
-          {" "}
+        <a href={href} target="_blank" rel="noopener noreferrer">
           <img
             src={image}
             alt="project_image"
-            className="add-effect w-full h-auto object-cover md:rounded-3xl"
+            className="add-effect w-full h-auto object-cover md:rounded-3xl cursor-pointer hover:opacity-90 transition-opacity duration-300"
           />
-        </Link>
+        </a>
       </div>
 
       <div
