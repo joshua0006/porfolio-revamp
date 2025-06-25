@@ -144,6 +144,26 @@ const skills = [
         level: "Advanced",
         color: "from-blue-500 to-blue-700",
       },
+      {
+        name: "Framer Motion",
+        level: "Advanced",
+        color: "from-pink-400 to-pink-600",
+      },
+    ],
+  },
+  {
+    category: "Mobile Development",
+    technologies: [
+      {
+        name: "React Native",
+        level: "Advanced",
+        color: "from-blue-500 to-blue-700",
+      },
+      {
+        name: "Expo",
+        level: "Advanced",
+        color: "from-indigo-500 to-indigo-700",
+      },
     ],
   },
   {
@@ -167,7 +187,7 @@ const skills = [
     ],
   },
   {
-    category: "AI & Development Tools",
+    category: "AI Tools",
     technologies: [
       {
         name: "Cursor AI",
@@ -186,8 +206,9 @@ const skills = [
       },
     ],
   },
+
   {
-    category: "Tools & Technologies",
+    category: "Development Tools",
     technologies: [
       {
         name: "Git & GitHub",
@@ -198,11 +219,6 @@ const skills = [
         name: "Vite",
         level: "Advanced",
         color: "from-purple-400 to-pink-400",
-      },
-      {
-        name: "Framer Motion",
-        level: "Advanced",
-        color: "from-pink-400 to-pink-600",
       },
     ],
   },
