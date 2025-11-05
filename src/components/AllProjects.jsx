@@ -318,14 +318,8 @@ const AllProjects = () => {
         animate={{ y: 0, opacity: 1 }}
         className="sticky top-0 z-50 backdrop-blur-xl bg-primary/80 border-b border-white/10"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <motion.h1
-              variants={textVariant()}
-              className={`${styles.sectionText} bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent`}
-            >
-              All Projects
-            </motion.h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center gap-4">
             <button
               onClick={() => window.history.back()}
               className="flex items-center gap-2 bg-tertiary/20 hover:bg-tertiary/40 border border-tertiary/30 hover:border-tertiary/50 px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105"
@@ -334,6 +328,12 @@ const AllProjects = () => {
               <span className="hidden sm:inline">Back to Portfolio</span>
               <span className="sm:hidden">Back</span>
             </button>
+            <motion.h1
+              variants={textVariant()}
+              className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"
+            >
+              All Projects
+            </motion.h1>
           </div>
 
           {/* Search and Stats */}
@@ -341,9 +341,9 @@ const AllProjects = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-between"
+            className="mt-4"
           >
-            <div className="relative flex-1 max-w-md">
+            <div className="relative max-w-md">
               <i className="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
               <input
                 type="text"
@@ -352,11 +352,6 @@ const AllProjects = () => {
                 placeholder="Search projects or technologies..."
                 className="w-full pl-12 pr-4 py-4 rounded-xl text-white placeholder-gray-400 focus:outline-none bg-white/5 border border-white/10 backdrop-blur-sm focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300"
               />
-            </div>
-            <div className="flex items-center gap-6 text-sm text-gray-300">
-              <span className="bg-white/10 px-3 py-2 rounded-lg">
-                {filteredProjects.length} Projects
-              </span>
             </div>
           </motion.div>
         </div>
