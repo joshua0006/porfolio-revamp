@@ -249,7 +249,7 @@ const AllProjects = () => {
           } px-4 lg:px-8`}
         >
           {/* Project Title */}
-          <h3 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300">
+          <h3 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 group-hover:text-violet-400 transition-all duration-300">
             {project.name}
           </h3>
 
@@ -286,7 +286,7 @@ const AllProjects = () => {
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center gap-2 bg-violet-500 hover:bg-violet-600 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <i className="fas fa-external-link-alt"></i>
               View Project
@@ -330,7 +330,7 @@ const AllProjects = () => {
             </button>
             <motion.h1
               variants={textVariant()}
-              className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent"
+              className="text-xl sm:text-2xl md:text-3xl font-bold text-violet-400"
             >
               All Projects
             </motion.h1>
@@ -379,7 +379,7 @@ const AllProjects = () => {
               onClick={() => setActiveFilter(filter.key)}
               className={`px-6 py-3 rounded-full text-sm font-semibold border transition-all duration-300 ${
                 activeFilter === filter.key
-                  ? "bg-gradient-to-r from-purple-500 to-pink-500 border-purple-400 text-white scale-105 shadow-lg"
+                  ? "bg-violet-500 border-violet-400 text-white scale-105 shadow-lg"
                   : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20"
               }`}
             >
