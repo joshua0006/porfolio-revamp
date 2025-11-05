@@ -14,9 +14,9 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="text-center md:text-left md:px-20 lg:px-40">
+    <div className="text-left">
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionText}`}>Portfolio</h2>
+        <h2 className={`${styles.sectionText} text-left`}>Portfolio</h2>
       </motion.div>
 
       {/* Featured Projects */}

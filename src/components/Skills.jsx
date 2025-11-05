@@ -22,9 +22,9 @@ const SkillCard = ({ skill, index }) => {
 
 const Skills = () => {
   return (
-    <div className="text-center md:text-left md:px-20 lg:px-40">
+    <div className="text-left">
       <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionText}`}>Skills</h2>
+        <h2 className={`${styles.sectionText} text-left`}>Skills</h2>
       </motion.div>
 
       <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">

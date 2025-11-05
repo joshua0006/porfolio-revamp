@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
+import { textVariant } from "../utils/motion";
 
 const Contact = () => {
   const controls = useAnimation();
@@ -12,7 +13,11 @@ const Contact = () => {
   }, [controls]);
 
   return (
-    <div className="md:m-12 md:px-48 flex flex-col sm:flex-row gap-10 overflow-hidden">
+    <div className="text-left">
+      <motion.div variants={textVariant()}>
+        <h2 className={`${styles.sectionText} text-left`}>Contact</h2>
+      </motion.div>
+
       <motion.div
         initial="hidden"
         animate={controls}
@@ -31,10 +36,8 @@ const Contact = () => {
             },
           },
         }}
-        className="flex-[0.8] md:pb-40 mx-4 sm:mx-auto"
+        className="mt-8 md:mt-12"
       >
-        <h3 className={styles.sectionText}>Contact</h3>
-
         <div className="contact-addon">
           <div className="my-img">
             {" "}
