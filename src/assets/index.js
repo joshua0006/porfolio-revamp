@@ -9,7 +9,7 @@ import jic from "./JiC.png";
 import elementClash from "./elementClash.png";
 import cardMatch from "./card-match.png";
 import redHorizon from "./red-horizon.png";
-import modCycle from "./modcycle.png";
+import breakawayCycles from "./Breakaway-Cycles.png";
 import architectHub from "./architect-hub.png";
 
 // Frontend Development Skills Icons
@@ -48,7 +48,7 @@ export {
   jic,
   elementClash,
   redHorizon,
-  modCycle,
+  breakawayCycles,
   architectHub,
   javascriptIcon,
   reactIcon,

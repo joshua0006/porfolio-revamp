@@ -99,7 +99,7 @@ const AllProjects = () => {
       });
     }
     if (
-      name.toLowerCase().includes("modcycle") ||
+      name.toLowerCase().includes("breakaway") ||
       description.includes("e-commerce") ||
       description.includes("shopping")
     ) {
