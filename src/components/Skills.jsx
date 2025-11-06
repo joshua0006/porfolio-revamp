@@ -10,8 +10,17 @@ const SkillCard = ({ skill, index }) => {
       variants={fadeIn("up", "spring", index * 0.05, 0.5)}
       className="bg-tertiary/50 backdrop-blur-sm px-4 py-3 rounded-lg border border-gray-600/30 hover:border-gray-500/50 transition-all duration-200 hover:bg-tertiary/70"
     >
-      <div className="flex items-center justify-between">
-        <span className="text-white font-medium text-[16px]">{skill.name}</span>
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3 flex-1">
+          {skill.icon && (
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="w-6 h-6 object-contain"
+            />
+          )}
+          <span className="text-white font-medium text-[16px]">{skill.name}</span>
+        </div>
         <span className="text-gray-400 text-[12px] uppercase tracking-wide">
           {skill.level}
         </span>
