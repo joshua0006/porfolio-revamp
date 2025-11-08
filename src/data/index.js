@@ -5,6 +5,7 @@ import {
   redHorizon,
   breakawayCycles,
   architectHub,
+  athenaCleaning,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
@@ -127,6 +128,12 @@ const additionalProjects = [
     description: `Elemental strategy game built with React and Vite, featuring real-time battles between different elements. Implements game logic with custom hooks for elemental strengths/weaknesses systems, animated battles using Framer Motion, and persistent player stats via Firebase. Optimized for performance with code splitting and deployed on Netlify Edge Network.`,
     image: elementClash,
     href: "https://element-clasher.netlify.app/",
+  },
+  {
+    name: "Athena Cleaning",
+    description: `Professional cleaning service website built with React, featuring service showcases, booking functionality, and responsive design. Implements modern UI components for service displays, contact forms, and company branding. Optimized for mobile-first experience with clean layouts, intuitive navigation, and customer engagement features designed for residential cleaning services.`,
+    image: athenaCleaning,
+    href: "https://athena-cleaning.netlify.app/",
   },
 ];
 

@@ -11,6 +11,7 @@ import cardMatch from "./card-match.png";
 import redHorizon from "./red-horizon.png";
 import breakawayCycles from "./Breakaway-Cycles.png";
 import architectHub from "./architect-hub.png";
+import athenaCleaning from "./athena-cleaning.png";
 
 // Frontend Development Skills Icons
 import javascriptIcon from "./skillsicon/Frontend Development/javascript.svg";
@@ -50,6 +51,7 @@ export {
   redHorizon,
   breakawayCycles,
   architectHub,
+  athenaCleaning,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
