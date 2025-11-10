@@ -249,7 +249,7 @@ const AllProjects = () => {
           } px-4 lg:px-8`}
         >
           {/* Project Title */}
-          <h3 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 group-hover:text-violet-400 transition-all duration-300">
+          <h3 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 group-hover:text-white transition-all duration-300">
             {project.name}
           </h3>
 
