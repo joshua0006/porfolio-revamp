@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { close, menu } from "../assets";
+import { motion } from "framer-motion";
 import { navLinks } from "../data";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
-  const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -67,32 +65,6 @@ const Navbar = () => {
     },
   };
 
-  const menuVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.95,
-      y: -20,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
-      },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.95,
-      y: -20,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
   const listItemVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i) => ({
@@ -110,11 +82,11 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className={`max-w-fit mx-auto mt-6 md:mt-8 flex items-center justify-center bg-black/40 backdrop-blur-xl border border-white/20 shadow-xl shadow-black/40 ring-1 ring-white/5 rounded-full fixed top-0 left-0 right-0 z-40 pointer-events-none transition-transform duration-300 ${
+      className={`max-w-fit mx-auto mt-2 xs:mt-4 sm:mt-6 md:mt-8 flex items-center justify-center bg-black/40 backdrop-blur-xl border border-white/20 shadow-xl shadow-black/40 ring-1 ring-white/5 rounded-full fixed top-0 left-0 right-0 z-40 pointer-events-none transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex items-center gap-10 md:gap-12 px-8 md:px-12 py-4 md:py-5">
+      <div className="flex items-center gap-2 xs:gap-4 sm:gap-10 md:gap-12 px-3 xs:px-4 sm:px-8 md:px-12 py-2 xs:py-3 sm:py-4 md:py-5">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
@@ -124,13 +96,13 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <p className="text-white text-[28px] md:text-[36px] font-bold pointer-events-auto cursor-pointer flex">
+            <p className="text-white text-[18px] xs:text-[22px] sm:text-[28px] md:text-[36px] font-bold pointer-events-auto cursor-pointer flex">
               JM
             </p>
           </Link>
         </motion.div>
 
-        <ul className="list-none hidden sm:flex flex-row gap-8 md:gap-10 items-center">
+        <ul className="list-none flex flex-row gap-2 xs:gap-4 sm:gap-6 md:gap-10 items-center">
           {navLinks.map((nav, index) => (
             <motion.li
               key={nav.id}
@@ -140,7 +112,7 @@ const Navbar = () => {
               animate="visible"
               className={`relative ${
                 active === nav.id ? "text-white" : "text-gray-400"
-              } hover:text-white text-[16px] md:text-[18px] font-bold pointer-events-auto cursor-pointer transition-all duration-300`}
+              } hover:text-white text-[11px] xs:text-[13px] sm:text-[16px] md:text-[18px] font-bold pointer-events-auto cursor-pointer transition-all duration-300`}
               onClick={() => {
                 setActive(nav.id);
                 const section = document.getElementById(nav.id);
@@ -160,55 +132,6 @@ const Navbar = () => {
             </motion.li>
           ))}
         </ul>
-
-        <div className="sm:hidden flex items-center relative">
-          <motion.img
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain pointer-events-auto cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <AnimatePresence>
-            {toggle && (
-              <motion.div
-                variants={menuVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                className="p-6 absolute top-14 right-0 min-w-[140px] z-30 rounded-2xl bg-black/85 backdrop-blur-xl border border-white/20 shadow-xl"
-              >
-                <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-                  {navLinks.map((nav, index) => (
-                    <motion.li
-                      key={nav.id}
-                      custom={index}
-                      variants={listItemVariants}
-                      initial="hidden"
-                      animate="visible"
-                      whileHover={{ scale: 1.1, x: 10 }}
-                      className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                        active === nav.id ? "text-quaternary" : "text-gray-300"
-                      }`}
-                      onClick={() => {
-                        setToggle(!toggle);
-                        setActive(nav.id);
-                        const section = document.getElementById(nav.id);
-                        if (section) {
-                          section.scrollIntoView({ behavior: "smooth" });
-                        }
-                      }}
-                    >
-                      <a href={`#${nav.id}`}>{nav.title}</a>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
       </div>
     </motion.nav>
   );

@@ -10,7 +10,7 @@ module.exports = {
         quaternary: "#1689C8",
       },
       screens: {
-        'xs': "450px",
+        'xs': "375px",
         '3xl': "2160px",
       },
       backgroundImage: {
