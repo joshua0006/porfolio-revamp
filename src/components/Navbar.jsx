@@ -99,9 +99,9 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none"
+      className="w-full flex items-center bg-black/30 backdrop-blur-md p-8 sm:px-16 sm:py-6 fixed z-40 pointer-events-none"
     >
-      <div className="w-full flex justify-between items-start mx-auto">
+      <div className="w-full flex justify-between items-center mx-auto">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
@@ -117,7 +117,7 @@ const Navbar = () => {
           </Link>
         </motion.div>
 
-        <ul className="list-none hidden sm:flex flex-col gap-5">
+        <ul className="list-none hidden sm:flex flex-row gap-8 items-center">
           {navLinks.map((nav, index) => (
             <motion.li
               key={nav.id}
@@ -125,9 +125,9 @@ const Navbar = () => {
               variants={listItemVariants}
               initial="hidden"
               animate="visible"
-              className={`relative flex items-center ${
-                active === nav.id ? "text-white" : "text-slate-500"
-              } hover:text-white text-[18px] lg:text-[24px] font-bold pointer-events-auto cursor-pointer`}
+              className={`relative ${
+                active === nav.id ? "text-white" : "text-gray-400"
+              } hover:text-white text-[18px] lg:text-[20px] font-bold pointer-events-auto cursor-pointer transition-all duration-300`}
               onClick={() => {
                 setActive(nav.id);
                 const section = document.getElementById(nav.id);
@@ -136,10 +136,14 @@ const Navbar = () => {
                 }
               }}
             >
-              {active === nav.id && (
-                <div className="fixed right-10 w-2 h-6 lg:h-8 bg-quaternary" />
-              )}
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a
+                href={`#${nav.id}`}
+                className={`pb-1 ${
+                  active === nav.id ? "border-b-2 border-quaternary" : ""
+                }`}
+              >
+                {nav.title}
+              </a>
             </motion.li>
           ))}
         </ul>
@@ -173,7 +177,7 @@ const Navbar = () => {
                       animate="visible"
                       whileHover={{ scale: 1.1, x: 10 }}
                       className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                        active === nav.id ? "text-quaternary" : "text-secondary"
+                        active === nav.id ? "text-quaternary" : "text-gray-300"
                       }`}
                       onClick={() => {
                         setToggle(!toggle);
