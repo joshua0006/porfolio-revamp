@@ -8,16 +8,27 @@ const Navbar = () => {
   const [active, setActive] = useState("hero");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setScrolled(scrollTop > 100);
+
+      // Show navbar when scrolling up or at top, hide when scrolling down
+      if (scrollTop < lastScrollY || scrollTop < 10) {
+        setShowNavbar(true);
+      } else if (scrollTop > lastScrollY && scrollTop > 100) {
+        setShowNavbar(false);
+      }
+
+      setLastScrollY(scrollTop);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("div[id]");
@@ -99,25 +110,27 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="w-full flex items-center bg-black/30 backdrop-blur-md p-8 sm:px-16 sm:py-6 fixed z-40 pointer-events-none"
+      className={`max-w-fit mx-auto mt-6 md:mt-8 flex items-center justify-center bg-black/20 backdrop-blur-lg border border-white/10 shadow-lg shadow-black/20 rounded-full fixed top-0 left-0 right-0 z-40 pointer-events-none transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
     >
-      <div className="w-full flex justify-between items-center mx-auto">
+      <div className="flex items-center gap-6 md:gap-8 px-6 md:px-8 py-3 md:py-4">
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
-            className="flex items-start"
+            className="flex items-center"
             onClick={() => {
               setActive("hero");
               window.scrollTo(0, 0);
             }}
           >
-            <p className="text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex">
+            <p className="text-white text-[22px] md:text-[28px] font-bold pointer-events-auto cursor-pointer flex">
               JM
             </p>
           </Link>
         </motion.div>
 
-        <ul className="list-none hidden sm:flex flex-row gap-8 items-center">
+        <ul className="list-none hidden sm:flex flex-row gap-6 md:gap-8 items-center">
           {navLinks.map((nav, index) => (
             <motion.li
               key={nav.id}
@@ -127,7 +140,7 @@ const Navbar = () => {
               animate="visible"
               className={`relative ${
                 active === nav.id ? "text-white" : "text-gray-400"
-              } hover:text-white text-[18px] lg:text-[20px] font-bold pointer-events-auto cursor-pointer transition-all duration-300`}
+              } hover:text-white text-[14px] md:text-[16px] font-bold pointer-events-auto cursor-pointer transition-all duration-300`}
               onClick={() => {
                 setActive(nav.id);
                 const section = document.getElementById(nav.id);
@@ -148,7 +161,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden flex items-center relative">
           <motion.img
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -165,7 +178,7 @@ const Navbar = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-black/80 backdrop-blur-sm"
+                className="p-6 absolute top-14 right-0 min-w-[140px] z-30 rounded-2xl bg-black/80 backdrop-blur-lg border border-white/10 shadow-xl"
               >
                 <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
                   {navLinks.map((nav, index) => (
