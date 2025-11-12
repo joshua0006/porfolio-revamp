@@ -6,6 +6,7 @@ import {
   breakawayCycles,
   architectHub,
   athenaCleaning,
+  moneyBee,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
@@ -134,6 +135,12 @@ const additionalProjects = [
     description: `Professional cleaning service website built with React, featuring service showcases, booking functionality, and responsive design. Implements modern UI components for service displays, contact forms, and company branding. Optimized for mobile-first experience with clean layouts, intuitive navigation, and customer engagement features designed for residential cleaning services.`,
     image: athenaCleaning,
     href: "https://athena-cleaning.netlify.app/",
+  },
+  {
+    name: "Money Bee",
+    description: `A personal finance management web application featuring real-time expense tracking, income and expense categorization, and transaction history. Built with an intuitive interface displaying total balance, categorized transactions with custom icons, and detailed financial summaries to help users manage their money effectively.`,
+    image: moneyBee,
+    href: "https://money-bee.netlify.app/",
   },
 ];
 

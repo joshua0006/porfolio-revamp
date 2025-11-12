@@ -30,11 +30,21 @@ const ProjectCard = ({ index, name, description, image, href }) => {
     >
       <div className="relative w-full md:w-3/5">
         <a href={href} target="_blank" rel="noopener noreferrer">
-          <img
-            src={image}
-            alt="project_image"
-            className="add-effect w-full h-auto object-cover md:rounded-3xl cursor-pointer hover:opacity-90 transition-opacity duration-300"
-          />
+          {name === "Money Bee" ? (
+            <div className="relative w-full aspect-[4/3] flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 md:rounded-3xl">
+              <img
+                src={image}
+                alt="project_image"
+                className="add-effect max-w-[60%] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity duration-300 rounded-2xl shadow-lg"
+              />
+            </div>
+          ) : (
+            <img
+              src={image}
+              alt="project_image"
+              className="add-effect w-full h-auto max-h-[400px] md:max-h-[500px] object-cover object-top md:rounded-3xl cursor-pointer hover:opacity-90 transition-opacity duration-300"
+            />
+          )}
         </a>
       </div>
 
