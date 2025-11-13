@@ -50,8 +50,7 @@
 
 .parallax > * {
   grid-area: stack;
-  animation: parallax linear;
-  animation-timeline: scroll();
+  will-change: transform;
 }
 
 .parallax > img {
@@ -113,11 +112,7 @@
   }
 }
 
-@keyframes parallax {
-  to {
-    transform: translateY(calc(var(--parallax-speed) * 1vh));
-  }
-}
+/* Parallax animation now handled by GSAP ScrollTrigger for cross-browser compatibility */
 
 .project-card {
   transition: transform 0.5s ease-out;

@@ -1,10 +1,60 @@
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SpacemanCanvas } from ".";
 import Position from "./Position";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Hero = ({ scrollContainer }) => {
+  const mountain1Ref = useRef(null);
+  const mountain2Ref = useRef(null);
+  const craterRef = useRef(null);
+
+  useEffect(() => {
+    if (!scrollContainer?.current) return;
+
+    const container = scrollContainer.current;
+
+    // Parallax only on mountains and crater
+    const parallaxLayers = [
+      { ref: mountain1Ref, speed: 250 },
+      { ref: mountain2Ref, speed: 140 },
+      { ref: craterRef, speed: 0 },
+    ];
+
+    // Create ScrollTrigger for each layer
+    const triggers = parallaxLayers.map(({ ref, speed }) => {
+      if (!ref.current) return null;
+
+      return gsap.to(ref.current, {
+        y: `${speed}vh`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          scroller: container,
+        },
+      });
+    });
+
+    // Cleanup
+    return () => {
+      triggers.forEach((trigger) => {
+        if (trigger && trigger.scrollTrigger) {
+          trigger.scrollTrigger.kill();
+        }
+      });
+    };
+  }, [scrollContainer]);
+
   return (
     <section className="parallax">
-      <div className="parallax__content absolute top-[10%] sm:top-[16%] lg:top-[24%] w-full mx-auto lg:pl-[30vh] lg:pr-[24vh] xl:pl-72 xl:pr-56 2xl:px-28 3xl:px-40 flex flex-col lg:flex-row items-start z-10">
+      <div
+        className="parallax__content absolute top-[10%] sm:top-[16%] lg:top-[24%] w-full mx-auto lg:pl-[30vh] lg:pr-[24vh] xl:pl-72 xl:pr-56 2xl:px-28 3xl:px-40 flex flex-col lg:flex-row items-start z-10"
+      >
         <div className="flex-1 lg:mb-0">
           <h1 className="font-medium text-white text-[30px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-[100px] 2xl:text-[180px] leading-[110px] 2xl:leading-[160px] ">
             JOSHUA MAGNASE
@@ -22,16 +72,18 @@ const Hero = ({ scrollContainer }) => {
       <img className="parallax__stars" src="./parallax/1Stars.svg" alt="" />
       <img className="parallax__planets" src="./parallax/2Planets.svg" alt="" />
       <img
+        ref={mountain1Ref}
         className="parallax__mountain1"
         src="./parallax/3Mountain.svg"
         alt=""
       />
       <img
+        ref={mountain2Ref}
         className="parallax__mountain2"
         src="./parallax/4Mountain.svg"
         alt=""
       />
-      <img className="parallax__crater" src="./parallax/5Crater.svg" alt="" />
+      <img ref={craterRef} className="parallax__crater" src="./parallax/5Crater.svg" alt="" />
       <img className="parallax__sun" src="./parallax/6Sun.svg" alt="" />
 
       <SpacemanCanvas scrollContainer={scrollContainer} />

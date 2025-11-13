@@ -4,7 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import spacemanScene from "../assets/3d/spaceman.glb";
 import CanvasLoader from "./Loader";
 
-const Spaceman = ({ scale, position }) => {
+const Spaceman = ({ scale, position, rotationX, rotationY }) => {
   const spacemanRef = useRef();
   const { scene, animations } = useGLTF(spacemanScene);
   const { actions } = useAnimations(animations, spacemanRef);
@@ -14,7 +14,7 @@ const Spaceman = ({ scale, position }) => {
   }, [actions]);
 
   return (
-    <mesh ref={spacemanRef} position={position} scale={scale} rotation={[0, 2.2, 0]}>
+    <mesh ref={spacemanRef} position={position} scale={scale} rotation={[rotationX, 2.2 + rotationY, 0]}>
       <primitive object={scene} />
     </mesh>
   );
@@ -55,11 +55,17 @@ const SpacemanCanvas = ({ scrollContainer }) => {
     };
 
     handleResize();
-    window.addEventListener("scroll", handleScroll);
+
+    const container = scrollContainer.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+    }
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
+      }
       window.removeEventListener("resize", handleResize);
     };
   }, [scrollContainer]);
