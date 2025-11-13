@@ -18,8 +18,8 @@ const Hero = ({ scrollContainer }) => {
 
     // Parallax only on mountains and crater
     const parallaxLayers = [
-      { ref: mountain1Ref, speed: 250 },
-      { ref: mountain2Ref, speed: 140 },
+      { ref: mountain1Ref, speed: 125 },
+      { ref: mountain2Ref, speed: 70 },
       { ref: craterRef, speed: 0 },
     ];
 
