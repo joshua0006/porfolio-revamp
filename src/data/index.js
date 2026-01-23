@@ -53,11 +53,11 @@ const experiences = [
     company_name: "Jezweb",
     date: "2023 - Present",
     details: [
-      "Designed 25+ responsive interfaces using <span style='color: white;'>Figma</span> with mobile-first approach",
       "Created design systems using <span style='color: white;'>CSS Modules</span> and <span style='color: white;'>Tailwind CSS</span>",
       "Improved conversion rates by 30% through <span style='color: white;'>A/B testing</span> and user flow optimization",
       "Developed <span style='color: white;'>WCAG 2.1</span> compliant accessible components",
       "Collaborated with developers to implement <span style='color: white;'>motion design</span> using Framer Motion",
+      "Integrated <span style='color: white;'>Cursor AI</span> and <span style='color: white;'>Claude AI</span> for intelligent code generation, refactoring, and automated component development",
     ],
   },
   {
