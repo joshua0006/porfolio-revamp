@@ -439,6 +439,27 @@
   fill: #0077b5;
 }
 
+.gmail {
+  background: #fff;
+}
+
+.gmail svg {
+  filter: none;
+}
+
+.gmail:hover {
+  background: conic-gradient(
+    #4285f4 0deg 90deg,
+    #ea4335 90deg 180deg,
+    #fbbc04 180deg 270deg,
+    #34a853 270deg 360deg
+  );
+}
+
+.gmail:hover svg {
+  filter: brightness(0) invert(1);
+}
+
 .instagram {
   background-color: white;
 }
