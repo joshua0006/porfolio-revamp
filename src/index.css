@@ -441,19 +441,39 @@
 
 .gmail {
   background: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
-.gmail svg {
-  filter: none;
+.gmail::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4285f4 0deg 82deg,
+    #ea4335 98deg 172deg,
+    #fbbc04 188deg 262deg,
+    #34a853 278deg 352deg,
+    #4285f4 368deg
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gmail:hover::before {
+  opacity: 0.85;
 }
 
 .gmail:hover {
-  background: conic-gradient(
-    #4285f4 0deg 90deg,
-    #ea4335 90deg 180deg,
-    #fbbc04 180deg 270deg,
-    #34a853 270deg 360deg
-  );
+  box-shadow: 0px 0px 10px 3px #00000033;
+}
+
+.gmail svg {
+  position: relative;
+  z-index: 1;
+  filter: none;
+  transition: filter 0.3s;
 }
 
 .gmail:hover svg {
