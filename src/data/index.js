@@ -1,12 +1,13 @@
 import {
   cardMatch,
   elementClash,
-  jic,
-  redHorizon,
+  adventuresInSpeechPathology,
+  pineappleTours,
   breakawayCycles,
   architectHub,
   athenaCleaning,
   moneyBee,
+  raveRemedy,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
@@ -51,7 +52,7 @@ const experiences = [
   {
     title: "Web Designer",
     company_name: "Jezweb",
-    date: "2023 - Present",
+    date: "2023 - 2026",
     details: [
       "Created design systems using <span style='color: white;'>CSS Modules</span> and <span style='color: white;'>Tailwind CSS</span>",
       "Improved conversion rates by 30% through <span style='color: white;'>A/B testing</span> and user flow optimization",
@@ -88,22 +89,22 @@ const experiences = [
 
 const portfolio = [
   {
-    name: "Red Horizon",
-    description: `Premium travel booking and tour platform built with Next.js and TypeScript. Features comprehensive vacation packages, destination search functionality, and seamless booking experiences for tropical getaways. Implements server-side rendering for optimal SEO, dynamic route generation, and modern UI/UX design with Tailwind CSS for responsive layouts across all devices.`,
-    image: redHorizon,
-    href: "https://red-horizon-silk.vercel.app/",
+    name: "Pineapple Tours",
+    description: `Tour booking for South East Queensland—wine tours, hop-on-hop-off, private charters. Updated booking flow and logic; React components run inside WordPress so editors keep the CMS and guests get a modern checkout.`,
+    image: pineappleTours,
+    href: "https://pineappletours.com.au/",
     featured: true,
   },
   {
     name: "Breakaway Cycles",
-    description: `Comprehensive e-commerce platform specializing in bicycle parts and components. Features product catalog browsing, advanced filtering systems, shopping cart functionality, and secure checkout processes. Built with modern React architecture, responsive design patterns, and optimized for performance with fast loading times and intuitive user experience.`,
+    description: `Bicycle parts e-commerce: catalog, filters, cart, secure checkout. React, responsive layout, optimized for fast loads.`,
     image: breakawayCycles,
     href: "https://bicycle-parts-ecommerce.vercel.app/",
     featured: true,
   },
   {
     name: "Joshua Hub",
-    description: `Advanced task management hub with integrated document handling and organizational structure. Features project tracking, file management systems, collaborative workflows, and structured document organization. Built with modern web technologies focusing on productivity enhancement, user-friendly interfaces, and seamless document processing capabilities.`,
+    description: `Task and document hub: projects, files, workflows. The live Netlify demo uses mock data only—production handles sensitive data that cannot be shared.`,
     image: architectHub,
     href: "https://joshua-hub.netlify.app/",
     featured: true,
@@ -112,35 +113,41 @@ const portfolio = [
 
 const additionalProjects = [
   {
-    name: "Journeys in Communication",
-    description: `Interactive learning platform built with React and React Router, featuring educational content about communication strategies. Implements Firebase for user authentication and content storage, with real-time updates through Firestore. Includes interactive quizzes using Redux Toolkit for state management and styled with Tailwind CSS for clean educational layouts.`,
-    image: jic,
-    href: "https://communicationjourney.netlify.app/",
+    name: "Adventures in Speech Pathology",
+    description: `Educational resources by SLPs for SLPs—worksheets, activities, assessments. Catalogs, resource finder, membership, bookmarks for therapy-ready materials.`,
+    image: adventuresInSpeechPathology,
+    href: "https://adventuresinspeechpathology.com/",
   },
   {
     name: "Card Matcher",
     description:
-      "Memory matching game built with React and Vite, utilizing Context API for tracking card states and game progress. Features dynamic card animations with CSS transforms, score tracking with Local Storage API, and responsive grid layouts using CSS Grid. Includes multiple difficulty levels and automated CI/CD deployment through Netlify.",
+      "Memory matching game—React, Vite, Context API, CSS transforms, Local Storage scores, CSS Grid. Difficulty levels; deployed on Netlify.",
     image: cardMatch,
     href: "https://card-matcher-game.netlify.app/",
   },
   {
     name: "Element Clash",
-    description: `Elemental strategy game built with React and Vite, featuring real-time battles between different elements. Implements game logic with custom hooks for elemental strengths/weaknesses systems, animated battles using Framer Motion, and persistent player stats via Firebase. Optimized for performance with code splitting and deployed on Netlify Edge Network.`,
+    description: `Element battle game—React, Vite, custom hooks, Framer Motion battles, Firebase stats. Netlify deployment.`,
     image: elementClash,
     href: "https://element-clasher.netlify.app/",
   },
   {
     name: "Athena Cleaning",
-    description: `Professional cleaning service website built with React, featuring service showcases, booking functionality, and responsive design. Implements modern UI components for service displays, contact forms, and company branding. Optimized for mobile-first experience with clean layouts, intuitive navigation, and customer engagement features designed for residential cleaning services.`,
+    description: `React marketing site for a cleaning company—services, booking, contact, branding. Responsive, mobile-first.`,
     image: athenaCleaning,
     href: "https://athena-cleaning.netlify.app/",
   },
   {
     name: "Money Bee",
-    description: `A personal finance management web application featuring real-time expense tracking, income and expense categorization, and transaction history. Built with an intuitive interface displaying total balance, categorized transactions with custom icons, and detailed financial summaries to help users manage their money effectively.`,
+    description: `Personal finance dashboard—income and expenses, categories, history, balance summaries, and clear transaction views.`,
     image: moneyBee,
     href: "https://money-bee.netlify.app/",
+  },
+  {
+    name: "Rave Remedy",
+    description: `E-commerce landing for recovery supplements—bold branding, hero imagery, shop navigation, cart. Desktop and mobile.`,
+    image: raveRemedy,
+    href: "https://raveremedy.com/",
   },
 ];
 

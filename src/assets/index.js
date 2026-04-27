@@ -5,14 +5,15 @@ import algorithms from "./algorithms.png";
 import devnotes from "./devnotes.png";
 import dylanShop from "./dylanShop.png";
 import tailwind from "./tailwind.png";
-import jic from "./JiC.png";
+import adventuresInSpeechPathology from "./adventures-in-speech-pathology.png";
 import elementClash from "./elementClash.png";
 import cardMatch from "./card-match.png";
-import redHorizon from "./red-horizon.png";
+import pineappleTours from "./pineapple-tours.png";
 import breakawayCycles from "./Breakaway-Cycles.png";
 import architectHub from "./architect-hub.png";
 import athenaCleaning from "./athena-cleaning.png";
 import moneyBee from "./money-bee.png";
+import raveRemedy from "./rave-remedy.png";
 
 // Frontend Development Skills Icons
 import javascriptIcon from "./skillsicon/Frontend Development/javascript.svg";
@@ -47,13 +48,14 @@ export {
   menu,
   cardMatch,
   tailwind,
-  jic,
+  adventuresInSpeechPathology,
   elementClash,
-  redHorizon,
+  pineappleTours,
   breakawayCycles,
   architectHub,
   athenaCleaning,
   moneyBee,
+  raveRemedy,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
