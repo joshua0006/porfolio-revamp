@@ -54,11 +54,10 @@ const experiences = [
     company_name: "Jezweb",
     date: "2023 - 2026",
     details: [
-      "Created design systems using <span style='color: white;'>CSS Modules</span> and <span style='color: white;'>Tailwind CSS</span>",
-      "Improved conversion rates by 30% through <span style='color: white;'>A/B testing</span> and user flow optimization",
-      "Developed <span style='color: white;'>WCAG 2.1</span> compliant accessible components",
-      "Collaborated with developers to implement <span style='color: white;'>motion design</span> using Framer Motion",
-      "Integrated <span style='color: white;'>Cursor AI</span> and <span style='color: white;'>Claude AI</span> for intelligent code generation, refactoring, and automated component development",
+      "Design systems and UI kits in <span style='color: white;'>HTML</span>, <span style='color: white;'>CSS</span>, and <span style='color: white;'>JavaScript</span>, built with <span style='color: white;'>CSS Modules</span> and <span style='color: white;'>Tailwind CSS</span> for consistent, maintainable styling",
+      "Shipped <span style='color: white;'>WCAG 2.1</span> accessible components; worked with developers on <span style='color: white;'>React</span> / <span style='color: white;'>JSX</span> implementations and design handoff",
+      "Ran <span style='color: white;'>A/B tests</span>, tightened user flows, and improved conversion rates by ~30%",
+      "Motion and micro-interactions in <span style='color: white;'>Framer Motion</span>; used <span style='color: white;'>Cursor AI</span> and <span style='color: white;'>Claude AI</span> to speed up layout, refactors, and component work",
     ],
   },
   {
@@ -66,11 +65,10 @@ const experiences = [
     company_name: "Exercise For Injuries",
     date: "2024 - 2025",
     details: [
-      "Developed responsive web applications using <span style='color: white;'>React, Next.js, and TypeScript</span> with 95+ Lighthouse performance scores",
-      "Implemented <span style='color: white;'>Redux Toolkit</span> for state management and <span style='color: white;'>React Query</span> for server-state synchronization",
-      "Integrated <span style='color: white;'>RESTful APIs</span> and optimized database queries reducing load times by 40%",
-      "Established <span style='color: white;'>CI/CD pipelines</span> using GitHub Actions and Docker containers",
-      "Conducted code reviews and mentored junior developers in <span style='color: white;'>clean architecture</span> principles",
+      "Built responsive apps with <span style='color: white;'>React</span>, <span style='color: white;'>Next.js</span>, <span style='color: white;'>TypeScript</span>, and modern <span style='color: white;'>JavaScript</span> (<span style='color: white;'>ES6+</span>); 95+ Lighthouse scores on shipped pages",
+      "State and data layer: <span style='color: white;'>Redux Toolkit</span>, <span style='color: white;'>React Query</span>, and <span style='color: white;'>REST</span> APIs; optimized queries and payloads to cut load times ~40%",
+      "Tooling and delivery: <span style='color: white;'>Git</span>, <span style='color: white;'>Node.js</span> ecosystem, <span style='color: white;'>CI/CD</span> with GitHub Actions and <span style='color: white;'>Docker</span> for repeatable builds",
+      "Code reviews and mentoring on <span style='color: white;'>clean architecture</span>, patterns, and performance for the rest of the team",
     ],
   },
   {
@@ -78,11 +76,10 @@ const experiences = [
     company_name: "Self Employed",
     date: "2023-2024",
     details: [
-      "Built 15+ production applications using <span style='color: white;'>React, Tailwind CSS, and JavaScript</span>",
-      "Integrated <span style='color: white;'>Firebase</span> authentication and realtime databases for client projects",
-      "Implemented <span style='color: white;'>REST API</span> integrations with Axios and error handling",
-      "Optimized web performance achieving <span style='color: white;'>90+ Core Web Vitals</span> scores",
-      "Configured <span style='color: white;'>Webpack</span> builds and automated deployments using Netlify CI/CD",
+      "Delivered 15+ production sites and apps using <span style='color: white;'>React</span>, <span style='color: white;'>JavaScript</span> (<span style='color: white;'>ES6+</span>), <span style='color: white;'>HTML</span>, <span style='color: white;'>CSS</span>, and <span style='color: white;'>Tailwind CSS</span> for fast, responsive UIs",
+      "Backend-as-a-service with <span style='color: white;'>Firebase</span> (auth, Firestore / realtime listeners); <span style='color: white;'>REST</span> integrations using <span style='color: white;'>Axios</span> and solid error handling",
+      "Performance work for 90+ Core Web Vitals; bundling with <span style='color: white;'>Webpack</span> and <span style='color: white;'>Vite</span> depending on project",
+      "Workflow: <span style='color: white;'>npm</span>, <span style='color: white;'>Git</span>, and automated deploys on <span style='color: white;'>Netlify</span> with CI/CD hooks",
     ],
   },
 ];
@@ -116,20 +113,13 @@ const additionalProjects = [
     name: "Adventures in Speech Pathology",
     description: `Educational resources by SLPs for SLPs—worksheets, activities, assessments. Catalogs, resource finder, membership, bookmarks for therapy-ready materials.`,
     image: adventuresInSpeechPathology,
-    href: "https://adventuresinspeechpathology.com/",
+    href: "https://therapytools.netlify.app/",
   },
   {
-    name: "Card Matcher",
-    description:
-      "Memory matching game—React, Vite, Context API, CSS transforms, Local Storage scores, CSS Grid. Difficulty levels; deployed on Netlify.",
-    image: cardMatch,
-    href: "https://card-matcher-game.netlify.app/",
-  },
-  {
-    name: "Element Clash",
-    description: `Element battle game—React, Vite, custom hooks, Framer Motion battles, Firebase stats. Netlify deployment.`,
-    image: elementClash,
-    href: "https://element-clasher.netlify.app/",
+    name: "Rave Remedy",
+    description: `E-commerce landing for recovery supplements—bold branding, hero imagery, shop navigation, cart. Desktop and mobile.`,
+    image: raveRemedy,
+    href: "https://raveremedy.com/",
   },
   {
     name: "Athena Cleaning",
@@ -144,10 +134,17 @@ const additionalProjects = [
     href: "https://money-bee.netlify.app/",
   },
   {
-    name: "Rave Remedy",
-    description: `E-commerce landing for recovery supplements—bold branding, hero imagery, shop navigation, cart. Desktop and mobile.`,
-    image: raveRemedy,
-    href: "https://raveremedy.com/",
+    name: "Card Matcher",
+    description:
+      "Memory matching game—React, Vite, Context API, CSS transforms, Local Storage scores, CSS Grid. Difficulty levels; deployed on Netlify.",
+    image: cardMatch,
+    href: "https://card-matcher-game.netlify.app/",
+  },
+  {
+    name: "Element Clash",
+    description: `Element battle game—React, Vite, custom hooks, Framer Motion battles, Firebase stats. Netlify deployment.`,
+    image: elementClash,
+    href: "https://element-clasher.netlify.app/",
   },
 ];
 
