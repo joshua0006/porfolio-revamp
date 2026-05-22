@@ -8,6 +8,9 @@ import {
   athenaCleaning,
   moneyBee,
   raveRemedy,
+  metaflow,
+  analyticsDashboard,
+  easyhiresg,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
@@ -109,6 +112,24 @@ const portfolio = [
 ];
 
 const additionalProjects = [
+  {
+    name: "EasyHireSG",
+    description: `Maid agency platform for Singapore—helper search by experience and nationality, package cost breakdown, and transparent no-service-fee booking flow.`,
+    image: easyhiresg,
+    href: "https://www.easyhiresg.com/",
+  },
+  {
+    name: "Analytics Dashboard",
+    description: `Unified YouTube + Web Store analytics—combined revenue, views, and store units across multiple channels and stores with 7D/30D/90D range switching.`,
+    image: analyticsDashboard,
+    href: "https://analytics-dashboard-youtube.vercel.app",
+  },
+  {
+    name: "MetaFlow",
+    description: `AI advertising intelligence dashboard—live campaign health, agent-driven budget approvals, ROAS tracking, and multi-agent automation across Meta ad accounts.`,
+    image: metaflow,
+    href: "https://marketing-scaffold.vercel.app/",
+  },
   {
     name: "Adventures in Speech Pathology",
     description: `Educational resources by SLPs for SLPs—worksheets, activities, assessments. Catalogs, resource finder, membership, bookmarks for therapy-ready materials.`,

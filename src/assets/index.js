@@ -14,6 +14,9 @@ import architectHub from "./architect-hub.png";
 import athenaCleaning from "./athena-cleaning.png";
 import moneyBee from "./money-bee.png";
 import raveRemedy from "./rave-remedy.png";
+import metaflow from "./metaflow.png";
+import analyticsDashboard from "./analytics-dashboard.png";
+import easyhiresg from "./easyhiresg.png";
 
 // Frontend Development Skills Icons
 import javascriptIcon from "./skillsicon/Frontend Development/javascript.svg";
@@ -56,6 +59,9 @@ export {
   athenaCleaning,
   moneyBee,
   raveRemedy,
+  metaflow,
+  analyticsDashboard,
+  easyhiresg,
   javascriptIcon,
   reactIcon,
   nextjsIcon,
