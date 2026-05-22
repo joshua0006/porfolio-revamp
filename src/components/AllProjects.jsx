@@ -9,31 +9,17 @@ const AllProjects = () => {
   // Categorize project function
   const categorizeProject = (project) => {
     const desc = project.description.toLowerCase();
-    if (
-      desc.includes("game") ||
-      desc.includes("memory") ||
-      desc.includes("battle")
-    )
+    if (desc.includes("game") || desc.includes("memory") || desc.includes("battle") || desc.includes("matching"))
       return "game";
-    if (
-      desc.includes("ecommerce") ||
-      desc.includes("e-commerce") ||
-      desc.includes("shop") ||
-      desc.includes("bicycle")
-    )
+    if (desc.includes("e-commerce") || desc.includes("ecommerce") || desc.includes("shop") || desc.includes("cart") || desc.includes("bicycle") || desc.includes("supplements") || desc.includes("catalog"))
       return "ecommerce";
-    if (desc.includes("travel") || desc.includes("booking")) return "travel";
-    if (
-      desc.includes("learning") ||
-      desc.includes("educational") ||
-      desc.includes("communication")
-    )
+    if (desc.includes("dashboard") || desc.includes("analytics") || desc.includes("revenue") || desc.includes("campaigns") || desc.includes("roas") || desc.includes("finance") || desc.includes("income"))
+      return "dashboard";
+    if (desc.includes("booking") || desc.includes("tour") || desc.includes("agency") || desc.includes("cleaning") || desc.includes("maid") || desc.includes("helper") || desc.includes("services"))
+      return "business";
+    if (desc.includes("educational") || desc.includes("learning") || desc.includes("speech") || desc.includes("resources"))
       return "education";
-    if (
-      desc.includes("task") ||
-      desc.includes("document") ||
-      desc.includes("management")
-    )
+    if (desc.includes("task") || desc.includes("document") || desc.includes("workflow") || desc.includes("hub"))
       return "productivity";
     return "web";
   };
@@ -368,8 +354,9 @@ const AllProjects = () => {
           {[
             { key: "all", label: "All Projects", icon: "fa-th-large" },
             { key: "featured", label: "Featured", icon: "fa-star" },
-            { key: "web", label: "Web Apps", icon: "fa-globe" },
+            { key: "dashboard", label: "Dashboards & Analytics", icon: "fa-chart-bar" },
             { key: "ecommerce", label: "E-commerce", icon: "fa-shopping-cart" },
+            { key: "business", label: "Business & Marketing", icon: "fa-briefcase" },
             { key: "game", label: "Games", icon: "fa-gamepad" },
             { key: "education", label: "Education", icon: "fa-graduation-cap" },
             { key: "productivity", label: "Productivity", icon: "fa-tasks" },
